@@ -11,7 +11,7 @@ public class HelloController {
         return "Hello World!";
     }
 
-    @GetMapping("/api/me")
+    @GetMapping("/me")
     public Object me(Authentication authentication) {
         if (authentication == null || !authentication.isAuthenticated()) {
             return "未認証";

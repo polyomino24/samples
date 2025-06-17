@@ -20,6 +20,7 @@ public class DbUserDetailsService implements UserDetailsService {
 
      @Override
      public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+          // TODO: ユーザー情報をDBから取得する
           List<GrantedAuthority> authorities = List.of(new SimpleGrantedAuthority("ROLE_USER"));
           return new User(username, "password", authorities);
      }
